@@ -1,0 +1,36 @@
+Mem created
+Contents of Disk File: 
+Page: 0: 45 67 
+Page: 1: 39 51 
+Page: 2: 22 15 
+Page: 3: 61 73 
+Page: 4: 69 21 
+Page: 5: 11 2 
+Page: 6: 12 30 
+First Pass Performed
+Contents of Disk File: 
+Page: 0: 45 67 
+Page: 1: 39 51 
+Page: 2: 15 22 
+Page: 3: 61 73 
+Page: 4: 21 69 
+Page: 5: 2 11 
+Page: 6: 12 30 
+runSize: 1
+calling merge for < 0, 0, 1 >
+calling merge for < 2, 2, 3 >
+calling merge for < 4, 4, 5 >
+runSize: 2
+calling merge for < 0, 1, 3 >
+calling merge for < 4, 5, 6 >
+runSize: 4
+calling merge for < 0, 3, 6 >
+Total Passes required: 4
+Contents of Disk File: 
+Page: 0: 2 11 
+Page: 1: 12 15 
+Page: 2: 21 22 
+Page: 3: 30 39 
+Page: 4: 45 51 
+Page: 5: 61 67 
+Page: 6: 69 73 
