@@ -6,51 +6,36 @@
 // #include "DiskFile.cpp"
 // #include "ExtMergeSort.cpp"
 
+int MEM_FRAME_SIZE;
+int DISK_PAGE_SIZE;
+
 using namespace std;
 
 int main()
 {
-	int x;
-	//reads size of main memory in terms of number of frames available
-	// cin >> x;
-
-	// //create main memory of x frames
-	// MainMemory mm(x);
-
-
-	// //create a file by taking input from cin
-	// DiskFile f;
-	// f.readDiskFile();
-	// f.writeDiskFile();
-
-	// ExtMergeSort e;
+	cout << "ENTER PAGE/FRAME SIZE" << endl;
+	cin >> MEM_FRAME_SIZE ;
+	DISK_PAGE_SIZE = MEM_FRAME_SIZE;
+	cout  << "ENTER PARAMETER B, MUST BE EVEN" << endl;
+	int b;
+	cin >> b;
+	cout << "ENTER MEMORY SIZE" << endl;
+	int mem_size;
+	cin >> mem_size;
+	cout << "ENTER NUMBERS" << endl;
 	
-	// //call 2 way externalmerge sort
-	// e.twoWaySort(f,mm);
+	MainMemory mm(mem_size);
+	DiskFile f;
+	f.readDiskFile();
+	cout << "File is stored as" << endl;
+	f.writeDiskFile();
 
-	// //output file by using cout
-	// f.writeDiskFile(); 
-
-
-	
-	//reads size of main memory in terms of number of frames available
-	cin >> x;
-
-	//create main memory of x frames
-	MainMemory mm1(x);
-
-
-	//create a file by taking input from cin
-	DiskFile f1;
-	f1.readDiskFile();
-	f1.writeDiskFile();
-
-	ExtMergeSort e1;
+	ExtMergeSort e;
 	
 	//call 2 way externalmerge sort
-	e1.BWaySort(f1,mm1, 6);
+	e.BWaySort(f,mm, b);
 
 	//output file by using cout
-	f1.writeDiskFile(); 
+	f.writeDiskFile(); 
 
 }
