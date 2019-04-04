@@ -122,7 +122,7 @@ void ExtMergeSort :: Bmerge(DiskFile &inputFile, MainMemory &memory, int leftSta
 			else if (indexes[minindex]/MEM_FRAME_SIZE + 1 >= this->runSize)
 				frames[minindex][active[minindex]] = memory.getEmptyFrame();
 			else{		
-				frames[minindex][active[minindex]] = memory.loadPage(inputFile, minindex*this->runSize + indexes[minindex]/MEM_FRAME_SIZE+1);
+				frames[minindex][active[minindex]] = memory.loadPage(inputFile, leftStart + minindex*this->runSize + indexes[minindex]/MEM_FRAME_SIZE+1);
 			}
 			active[minindex] = (active[minindex]+1)%2;
 		}
