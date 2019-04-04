@@ -48,7 +48,7 @@ int main()
 	ExtMergeSort e1;
 	
 	//call 2 way externalmerge sort
-	e1.BWaySort(f1,mm1, 3);
+	e1.BWaySort(f1,mm1, 6);
 
 	//output file by using cout
 	f1.writeDiskFile(); 
